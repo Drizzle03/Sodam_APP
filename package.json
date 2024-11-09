@@ -48,7 +48,8 @@
     "react-native-web": "~0.19.10",
     "tailwind-merge": "^2.5.4",
     "tailwindcss": "^3.4.14",
-    "zustand": "^5.0.0"
+    "zustand": "^5.0.0",
+    "expo-store-review": "~7.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
