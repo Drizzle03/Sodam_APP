@@ -1,0 +1,68 @@
+{
+  "name": "starter",
+  "slug": "starter",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "icon": "./assets/images/icon.png",
+  "scheme": "petlog",
+  "userInterfaceStyle": "automatic",
+  "splash": {
+    "image": "./assets/images/splash.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#ffffff"
+  },
+  "ios": {
+    "googleServicesFile": "./GoogleService-Info.plist",
+    "supportsTablet": true,
+    "bundleIdentifier": "com.house201.starter",
+    "infoPlist": {
+      "CFBundleURLSchemes": ["com.house201.starter"]
+    }
+  },
+  "android": {
+    "package": "com.house201.starter",
+    "googleServicesFile": "./google-services.json",
+    "adaptiveIcon": {
+      "foregroundImage": "./assets/images/adaptive-icon.png",
+      "backgroundColor": "#ffffff"
+    }
+  },
+  "web": {
+    "bundler": "metro",
+    "output": "static",
+    "favicon": "./assets/images/favicon.png"
+  },
+  "plugins": [
+    "expo-router",
+    "@react-native-firebase/app",
+    [
+      "react-native-google-mobile-ads",
+      {
+        "iosAppId": "ca-app-pub-2507125479501117~3502349125",
+        "androidAppId": "ca-app-pub-2507125479501117~1641536764"
+      }
+    ],
+    "@react-native-firebase/crashlytics",
+    [
+      "expo-build-properties",
+      {
+        "ios": {
+          "useFrameworks": "static"
+        },
+        "android": {
+          "minSdkVersion": 24
+        }
+      }
+    ],
+    "expo-localization"
+  ],
+  "owner": "sgwanlee",
+  "experiments": {
+    "typedRoutes": true
+  },
+  "extra": {
+    "eas": {
+      "projectId": "f670bcd7-0c03-4bda-bccb-366276aeef82"
+    }
+  }
+}
