@@ -1,10 +1,10 @@
 {
-  "name": "starter",
-  "slug": "starter",
+  "name": "Yolo",
+  "slug": "yolo",
   "version": "1.0.0",
   "orientation": "portrait",
   "icon": "./assets/images/icon.png",
-  "scheme": "petlog",
+  "scheme": "yolo",
   "userInterfaceStyle": "automatic",
   "splash": {
     "image": "./assets/images/splash.png",
@@ -12,20 +12,27 @@
     "backgroundColor": "#ffffff"
   },
   "ios": {
-    "googleServicesFile": "./GoogleService-Info.plist",
     "supportsTablet": true,
-    "bundleIdentifier": "com.house201.starter",
+    "bundleIdentifier": "com.house201.yolo",
     "infoPlist": {
-      "CFBundleURLSchemes": ["com.house201.starter"]
+      "CFBundleURLSchemes": [
+        "com.house201.yolo"
+      ]
+    },
+    "config": {
+      "usesNonExemptEncryption": false
     }
   },
   "android": {
-    "package": "com.house201.starter",
-    "googleServicesFile": "./google-services.json",
+    "package": "com.house201.yolo",
     "adaptiveIcon": {
       "foregroundImage": "./assets/images/adaptive-icon.png",
       "backgroundColor": "#ffffff"
-    }
+    },
+    "permissions": [
+      "android.permission.RECORD_AUDIO",
+      "android.permission.MODIFY_AUDIO_SETTINGS"
+    ]
   },
   "web": {
     "bundler": "metro",
@@ -34,15 +41,6 @@
   },
   "plugins": [
     "expo-router",
-    "@react-native-firebase/app",
-    [
-      "react-native-google-mobile-ads",
-      {
-        "iosAppId": "ca-app-pub-2507125479501117~3502349125",
-        "androidAppId": "ca-app-pub-2507125479501117~1641536764"
-      }
-    ],
-    "@react-native-firebase/crashlytics",
     [
       "expo-build-properties",
       {
@@ -54,7 +52,15 @@
         }
       }
     ],
-    "expo-localization"
+    "expo-localization",
+    "expo-audio",
+    "expo-font",
+    [
+      "expo-av",
+      {
+        "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
+      }
+    ]
   ],
   "owner": "sgwanlee",
   "experiments": {
@@ -62,7 +68,10 @@
   },
   "extra": {
     "eas": {
-      "projectId": "f670bcd7-0c03-4bda-bccb-366276aeef82"
+      "projectId": "46dc8d08-a9a9-4509-b852-7c7a843d5177"
+    },
+    "router": {
+      "origin": false
     }
   }
 }
