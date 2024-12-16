@@ -1,10 +1,10 @@
 {
-  "name": "Yolo",
-  "slug": "yolo",
+  "name": "소담이",
+  "slug": "chat-sodam",
   "version": "1.0.0",
   "orientation": "portrait",
   "icon": "./assets/images/icon.png",
-  "scheme": "yolo",
+  "scheme": "chat-sodam",
   "userInterfaceStyle": "automatic",
   "splash": {
     "image": "./assets/images/splash.png",
@@ -13,18 +13,16 @@
   },
   "ios": {
     "supportsTablet": true,
-    "bundleIdentifier": "com.house201.yolo",
+    "bundleIdentifier": "com.house201.chat-sodam",
     "infoPlist": {
-      "CFBundleURLSchemes": [
-        "com.house201.yolo"
-      ]
+      "CFBundleURLSchemes": ["com.house201.chat-sodam"]
     },
     "config": {
       "usesNonExemptEncryption": false
     }
   },
   "android": {
-    "package": "com.house201.yolo",
+    "package": "com.house201.chat-sodam",
     "adaptiveIcon": {
       "foregroundImage": "./assets/images/adaptive-icon.png",
       "backgroundColor": "#ffffff"
