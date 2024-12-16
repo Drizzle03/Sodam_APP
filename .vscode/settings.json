@@ -1,1 +1,5 @@
-{}
+{
+  "cSpell.words": ["Ganji"],
+  "deno.enable": true,
+  "deno.enablePaths": ["supabase/functions"]
+}

@@ -6,6 +6,10 @@ const AppLayout = () => {
     <ThemeProvider>
       <Stack>
         <Stack.Screen name="home" options={{ headerShown: false }} />
+        {/* <Stack.Screen
+          name="paywall"
+          options={{ headerShown: false, presentation: "modal" }}
+        /> */}
       </Stack>
     </ThemeProvider>
   );
