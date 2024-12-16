@@ -15,7 +15,9 @@
     "supportsTablet": true,
     "bundleIdentifier": "com.house201.chat-sodam",
     "infoPlist": {
-      "CFBundleURLSchemes": ["com.house201.chat-sodam"]
+      "CFBundleURLSchemes": [
+        "com.house201.chat-sodam"
+      ]
     },
     "config": {
       "usesNonExemptEncryption": false
@@ -66,7 +68,7 @@
   },
   "extra": {
     "eas": {
-      "projectId": "46dc8d08-a9a9-4509-b852-7c7a843d5177"
+      "projectId": "b9862a96-424b-4430-8f8d-99614520d1a6"
     },
     "router": {
       "origin": false
