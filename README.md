@@ -1,65 +1,21 @@
-# Supabase related
+app에서 microphone 사용을 위한 권한 요청이 필요함.
 
-## Setup
+web에서 사용했던 code는 사용하지 못함. => `AudioWorkletNode` 같은 web api를 사용하지 못하기 때문에
 
-```
-supabase init
-```
+Dom component로 접근해보려고 했으나 mic control이 안됨
 
-## Run on local
+`connectConversation`로 연결하면
+`sendUserMessageContent`를 테스트로 진행
 
-```
-supabase start            # docker demon이 실행되고 있어야됨.
-supabase functions serve  # edge functions
-```
+ws client event handler의 `conversation.updated`에서 오디오 데이터 `delta.audio`를 받아 와서
+재생을 하면 되는데, 지금 재생하는 방법을 못찾음
 
-anon key와 url 확인
+https://platform.openai.com/docs/guides/realtime
 
-```
-supabase status
-```
+Today, the Realtime API supports two formats:
 
-## supabase functions deploy
+raw 16 bit PCM audio at 24kHz, 1 channel, little-endian
+G.711 at 8kHz (both u-law and a-law)
 
-```
-supabase functions deploy
-```
-
-## Connect
-
-https://supabase.com/docs/guides/local-development/overview
-
-```
-supabase login
-supabase link --project-ref <project-id>
-```
-
-## Pull from remote
-
-```
-supabase db pull                # schema가 변경되었으면 migration file 생성된다.
-supabase db pull --schema auth  # auth schema 적용
-supabase migration up           # migration 적용
-```
-
-## Push to remote
-
-```
-supabase db push
-```
-
-### Android
-
-remove android gradle cache
-
-```
-rm -rf ~/.gradle/caches
-rm -rf ~/.gradle/daemon
-rm -rf ~/.gradle/wrapper
-```
-
-### Android device
-
-```
-adb devices
-```
+input transcript를 위한 opton
+set the `input_audio_transcription` field on a `session.update` event.
