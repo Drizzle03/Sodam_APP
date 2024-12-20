@@ -1,7 +1,7 @@
 import { useFonts } from "expo-font";
 import { Slot, useRouter } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "react-native-reanimated";
 import "../global.css";
 

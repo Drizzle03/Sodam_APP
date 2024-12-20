@@ -1,7 +1,6 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { Alert, Button, Pressable, Text, View } from "react-native";
+import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import WebView from "react-native-webview";
 
@@ -12,11 +11,11 @@ const Home = () => {
     <View className="flex-1 bg-primary">
       <StatusBar style="auto" />
       <Stack.Screen options={{ headerShown: false }} />
-      {/* <SafeAreaView> */}
       <View
         className="flex-1"
         style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}
       >
+        {/* 웹뷰 */}
         <WebView
           key={1}
           source={{
@@ -27,7 +26,6 @@ const Home = () => {
           originWhitelist={["*"]}
         />
       </View>
-      {/* </SafeAreaView> */}
     </View>
   );
 };
