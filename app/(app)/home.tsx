@@ -6,7 +6,6 @@ import WebView from "react-native-webview";
 
 const Home = () => {
   const insets = useSafeAreaInsets();
-  console.log(process.env.EXPO_PUBLIC_OPENAI_API_KEY);
   return (
     <View className="flex-1 bg-primary">
       <StatusBar style="auto" />
